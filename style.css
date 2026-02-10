@@ -62,6 +62,20 @@ body {
   color: #ffffff;
 }
 
+/* FORCE NAVBAR INTO ONE LINE (MOBILE) */
+.navbar {
+  flex-wrap: nowrap;
+}
+
+.navbar nav {
+  flex-wrap: nowrap;
+}
+
+.navbar nav a {
+  white-space: nowrap;
+}
+
+
 /* =========================
    HERO SECTION
 ========================= */
@@ -367,3 +381,4 @@ footer {
     text-align: center;
   }
 }
+
