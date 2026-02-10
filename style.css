@@ -1,4 +1,6 @@
-/* RESET */
+/* =========================
+   RESET
+========================= */
 * {
   margin: 0;
   padding: 0;
@@ -6,14 +8,18 @@
   font-family: "Inter", system-ui, -apple-system, sans-serif;
 }
 
-/* BODY */
+/* =========================
+   BODY
+========================= */
 body {
   background: radial-gradient(circle at top, #0b1020, #05060c);
   color: #ffffff;
   line-height: 1.6;
 }
 
-/* NAVBAR */
+/* =========================
+   NAVBAR
+========================= */
 .navbar {
   position: sticky;
   top: 0;
@@ -26,47 +32,48 @@ body {
   backdrop-filter: blur(12px);
 }
 
-
-
+/* LOGO */
 .logo {
   font-weight: 700;
   font-size: 16px;
-  white-space: nowrap;   /* 🔥 KEY FIX */
+  white-space: nowrap; /* keeps logo in one line */
 }
 
 .logo span {
   color: #4cc9f0;
 }
 
-
-.navbar nav a {
+/* NAV CONTAINER */
+.navbar nav {
   display: flex;
   align-items: center;
   gap: 12px;
-  white-space: nowrap;   
+  white-space: nowrap; /* keeps links in one line */
 }
 
+/* NAV LINKS */
 .navbar nav a {
   font-size: 13px;
   color: #b9c2cc;
   text-decoration: none;
 }
 
+.navbar nav a:hover {
+  color: #ffffff;
+}
 
-/* HERO SECTION */
+/* =========================
+   HERO SECTION
+========================= */
 .hero {
   min-height: 100vh;
   width: 100%;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   text-align: center;
-
   padding: 0 20px;
-
   background:
     linear-gradient(
       rgba(5, 6, 12, 0.85),
@@ -75,32 +82,30 @@ body {
     url("images/hero.png") center / cover no-repeat;
 }
 
-
-
 .hero h1 {
   max-width: 900px;
-  margin: 0 auto 14px auto;  
+  margin: 0 auto 14px;
   font-size: clamp(32px, 4vw, 56px);
   font-weight: 700;
 }
 
-
 .hero p {
   max-width: 700px;
-  margin: 0 auto 28px auto;   
+  margin: 0 auto 28px;
   color: #b9c2cc;
   font-size: 15px;
 }
 
-
-/* HERO BUTTONS */
+/* =========================
+   HERO BUTTONS
+========================= */
 .buttons {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 14px;
+  flex-wrap: wrap;
 }
-
 
 .buttons a {
   padding: 12px 26px;
@@ -129,19 +134,21 @@ body {
   background: rgba(76, 201, 240, 0.1);
 }
 
-/* TIMELINE / WORK EXPERIENCE */
+/* =========================
+   TIMELINE / WORK EXPERIENCE
+========================= */
 .timeline {
   margin-top: 80px;
   padding: 80px 20px;
   background: linear-gradient(
     to bottom,
-    rgba(255,255,255,0.03),
-    rgba(255,255,255,0.01)
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.01)
   );
 }
 
-.timeline h2,
-.timeline h1 {
+.timeline h1,
+.timeline h2 {
   text-align: center;
   font-size: 26px;
   margin-bottom: 40px;
@@ -150,8 +157,8 @@ body {
 /* WORK CARD */
 .content {
   max-width: 720px;
-  margin: 0 auto 25px auto;
-  background: rgba(255,255,255,0.07);
+  margin: 0 auto 25px;
+  background: rgba(255, 255, 255, 0.07);
   padding: 26px;
   border-radius: 16px;
   cursor: pointer;
@@ -179,7 +186,9 @@ body {
   color: #d1d9e0;
 }
 
-/* DIRECTORS Proile*/
+/* =========================
+   DIRECTORS
+========================= */
 .directors {
   padding: 90px 20px;
 }
@@ -199,11 +208,11 @@ body {
 }
 
 .director-card {
-  background: rgba(255,255,255,0.06);
+  background: rgba(255, 255, 255, 0.06);
   padding: 28px;
   border-radius: 18px;
   text-align: center;
-  box-shadow: 0 0 30px rgba(0,0,0,0.4);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
   transition: transform 0.25s ease;
 }
 
@@ -234,7 +243,9 @@ body {
   color: #4cc9f0;
 }
 
-/* CONTACT */
+/* =========================
+   CONTACT
+========================= */
 .contact {
   padding: 80px 20px;
   text-align: center;
@@ -245,7 +256,9 @@ body {
   margin-bottom: 14px;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 footer {
   text-align: center;
   padding: 20px;
@@ -253,12 +266,14 @@ footer {
   color: #8b949e;
 }
 
-/* MODAL */
+/* =========================
+   MODAL
+========================= */
 .modal {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.75);
+  background: rgba(0, 0, 0, 0.75);
   align-items: center;
   justify-content: center;
   z-index: 999;
@@ -281,7 +296,9 @@ footer {
   cursor: pointer;
 }
 
-/* WHATSAPP FLOAT */
+/* =========================
+   WHATSAPP FLOAT
+========================= */
 .whatsapp-float {
   position: fixed;
   right: 22px;
@@ -300,7 +317,9 @@ footer {
   z-index: 998;
 }
 
-/* LOADER */
+/* =========================
+   LOADER
+========================= */
 #loader {
   position: fixed;
   inset: 0;
@@ -314,17 +333,21 @@ footer {
 .spinner {
   width: 56px;
   height: 56px;
-  border: 4px solid rgba(255,255,255,0.15);
+  border: 4px solid rgba(255, 255, 255, 0.15);
   border-top: 4px solid #4cc9f0;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-/* MOBILE POLISH */
+/* =========================
+   MOBILE POLISH
+========================= */
 @media (max-width: 768px) {
   .navbar {
     padding: 12px 14px;
@@ -337,7 +360,10 @@ footer {
   .navbar nav a {
     font-size: 12px;
   }
+
+  .buttons a {
+    width: 100%;
+    max-width: 260px;
+    text-align: center;
+  }
 }
-
-
-
